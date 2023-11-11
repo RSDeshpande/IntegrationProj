@@ -11,7 +11,7 @@ global with sharing class AccountManager {
         List<Account> accList = [Select ID, Name, Rating, Industry, Description, Phone, Fax from Account where id=:accountID];
         List<Contact> conList = [Select Id, Name, FirstName from Contact where AccountId=:accountID];
         List<Case> caseList = [Select Id, CaseNumber, Subject from Case where AccountId=:accountID];
-
+        //Test
         AccountWrapper accWrapper = new AccountWrapper();
         if(!accList.isEmpty())
         {
